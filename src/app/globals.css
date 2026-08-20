@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===== Custom color tokens (static, no runtime override needed) ===== */
+@theme inline {
+  /* NAVY — Trust + Technology */
+  --color-navy-950: #0A1628;
+  --color-navy-900: #0D1D36;
+  --color-navy-800: #111F3A;
+  --color-navy-700: #142850;
+  --color-navy-600: #1C3668;
+  --color-navy-500: #244580;
+  --color-navy-400: #3A5EA0;
+  --color-navy-300: #5B7ABE;
+
+  /* AMBER — Sun + Solar Energy */
+  --color-amber-600: #C78A0A;
+  --color-amber-500: #E09E0F;
+  --color-amber-400: #FFB414;
+  --color-amber-300: #FFC84D;
+
+  /* GREEN — Sustainability */
+  --color-sgreen-700: #055028;
+  --color-sgreen-600: #066432;
+  --color-sgreen-500: #087A40;
+  --color-sgreen-400: #0E9B56;
+  --color-sgreen-300: #34D67A;
+
+  /* IVORY — Clean + Natural */
+  --color-ivory-100: #FFFFF0;
+  --color-ivory-200: #FFF9DB;
+  --color-ivory-300: #FFF4C6;
+
+  /* CHARCOAL */
+  --color-charcoal: #141414;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+
+  /* Fonts */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+}
+
+/* ===== shadcn semantic tokens — LIGHT MODE (runtime variables for dark mode support) ===== */
+@theme {
+  --color-background: #FFFFF0;
+  --color-foreground: #142850;
+  --color-card: #ffffff;
+  --color-card-foreground: #142850;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #142850;
+  --color-primary: #FFB414;
+  --color-primary-foreground: #142850;
+  --color-secondary: #FFF9DB;
+  --color-secondary-foreground: #142850;
+  --color-muted: #F0F0E0;
+  --color-muted-foreground: #64748B;
+  --color-accent: #F0F0E0;
+  --color-accent-foreground: #142850;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #E5E7EB;
+  --color-input: #E5E7EB;
+  --color-ring: #FFB414;
+}
+
+/* ===== DARK MODE overrides ===== */
+.dark {
+  --color-background: #142850;
+  --color-foreground: #FFFFFF;
+  --color-card: #141414;
+  --color-card-foreground: #FFFFFF;
+  --color-popover: #141414;
+  --color-popover-foreground: #FFFFFF;
+  --color-primary: #FFB414;
+  --color-primary-foreground: #142850;
+  --color-secondary: #1C3668;
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #1C3668;
+  --color-muted-foreground: #CBD5E1;
+  --color-accent: #1C3668;
+  --color-accent-foreground: #FFFFFF;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #1C3668;
+  --color-input: #1C3668;
+  --color-ring: #FFB414;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* ===== Scroll progress bar ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FFB414, #E09E0F);
+  z-index: 9999;
+  transition: width 50ms linear;
+}
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A5EA0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1C3668;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #244580;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3A5EA0;
+}
+
+/* ===== Amber CTA button ===== */
+.btn-amber {
+  background: #FFB414;
+  color: #142850;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(255, 180, 20, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-amber:hover {
+  background: #E09E0F;
+  box-shadow: 0 6px 20px rgba(255, 180, 20, 0.5);
+  transform: translateY(-1px);
+}
+.btn-amber:active {
+  transform: translateY(0);
+}
+
+/* ===== Eco score badges ===== */
+.eco-badge-ap {
+  background: linear-gradient(135deg, #087A40, #0E9B56);
+  color: white;
+}
+.eco-badge-a {
+  background: #087A40;
+  color: white;
+}
+.eco-badge-b {
+  background: #FFB414;
+  color: #142850;
+}
+
+/* ===== Card hover lift ===== */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(20, 40, 80, 0.12);
+}
+.dark .card-hover:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Image zoom on hover ===== */
+.img-zoom {
+  transition: transform 0.4s ease;
+}
+.img-zoom:hover {
+  transform: scale(1.08);
+}
+
+/* ===== Navbar scroll state ===== */
+.navbar-solid {
+  background: rgba(255, 255, 240, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  box-shadow: 0 1px 8px rgba(20, 40, 80, 0.06);
+}
+.dark .navbar-solid {
+  background: rgba(20, 40, 80, 0.95);
+  border-bottom: 1px solid rgba(28, 54, 104, 0.3);
+}
+
+/* ===== Placeholder ===== */
+.dark input::placeholder, .dark textarea::placeholder {
+  color: rgba(203, 213, 225, 0.45);
+}
+
+/* ===== Sky-themed backgrounds ===== */
+.hero-sky {
+  background: linear-gradient(180deg, #5BA0D9 0%, #7DB8E8 20%, #A8D4F5 40%, #D4E8F7 60%, #F5ECD7 80%, #FFE8B0 100%);
+}
+.dark .hero-sky {
+  background: linear-gradient(180deg, #070E1A 0%, #0D1D36 25%, #142850 50%, #1A3060 75%, #1C3668 100%);
+}
+
+/* ===== Sky-themed Calculator background ===== */
+.calc-sky {
+  background: linear-gradient(180deg, #E0EFF9 0%, #EEF5FC 40%, #F8FAFE 70%, #FFFFF0 100%);
+}
+.dark .calc-sky {
+  background: linear-gradient(180deg, #0A1628 0%, #142850 40%, #1C3668 100%);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: rgba(255, 180, 20, 0.3);
+  color: #142850;
+}

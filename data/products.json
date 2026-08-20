@@ -1,0 +1,374 @@
+[
+  {
+    "id": "helios-400",
+    "name": "Helios 400W Residential Panel",
+    "category": "solar",
+    "price": 349,
+    "ecoScore": "A+",
+    "rating": 4.9,
+    "reviews": 384,
+    "badge": "Best Seller",
+    "img": "1509391366360-2e959784a276",
+    "desc": "High-efficiency monocrystalline panel with 22% conversion rate and 25-year performance warranty. Built to withstand extreme weather.",
+    "specs": [
+      {
+        "k": "Power",
+        "v": "400W"
+      },
+      {
+        "k": "Efficiency",
+        "v": "22%"
+      },
+      {
+        "k": "Cell type",
+        "v": "Monocrystalline"
+      },
+      {
+        "k": "Warranty",
+        "v": "25 years"
+      },
+      {
+        "k": "Dimensions",
+        "v": "79\" x 39\" x 1.4\""
+      }
+    ]
+  },
+  {
+    "id": "sunforge-200",
+    "name": "SunForge 200W Folding Kit",
+    "category": "solar",
+    "price": 249,
+    "ecoScore": "A",
+    "rating": 4.7,
+    "reviews": 192,
+    "badge": null,
+    "img": "1509391366360-2e959784a276",
+    "desc": "Portable folding panel kit for off-grid cabins, RVs, and emergency backup. Plug-and-play setup in under 5 minutes.",
+    "specs": [
+      {
+        "k": "Power",
+        "v": "200W"
+      },
+      {
+        "k": "Folded weight",
+        "v": "11 lbs"
+      },
+      {
+        "k": "Ports",
+        "v": "USB-C, DC, MC4"
+      },
+      {
+        "k": "Weatherproof",
+        "v": "IP67"
+      }
+    ]
+  },
+  {
+    "id": "aurora-300",
+    "name": "Aurora 300W Bifacial Panel",
+    "category": "solar",
+    "price": 289,
+    "ecoScore": "A+",
+    "rating": 4.8,
+    "reviews": 156,
+    "badge": null,
+    "img": "1509391366360-2e959784a276",
+    "desc": "Bifacial design captures light from both sides, boosting output by up to 30% in reflective environments like snow or light surfaces.",
+    "specs": [
+      {
+        "k": "Power",
+        "v": "300W"
+      },
+      {
+        "k": "Bifacial gain",
+        "v": "+30%"
+      },
+      {
+        "k": "Frame",
+        "v": "Anodized aluminum"
+      },
+      {
+        "k": "Warranty",
+        "v": "25 years"
+      }
+    ]
+  },
+  {
+    "id": "solis-100",
+    "name": "Solis 100W Portable Charger",
+    "category": "chargers",
+    "price": 129,
+    "ecoScore": "A",
+    "rating": 4.8,
+    "reviews": 421,
+    "badge": "New",
+    "img": "1592318348310-f31b61a931c8",
+    "desc": "Foldable solar charger with USB-C PD output. Charges phones, tablets, and small laptops in direct sun.",
+    "specs": [
+      {
+        "k": "Power",
+        "v": "100W"
+      },
+      {
+        "k": "USB-C",
+        "v": "60W PD"
+      },
+      {
+        "k": "Folded size",
+        "v": "11\" x 6\""
+      },
+      {
+        "k": "Weight",
+        "v": "2.8 lbs"
+      }
+    ]
+  },
+  {
+    "id": "sunbank-20k",
+    "name": "SunBank 20K Power Bank",
+    "category": "chargers",
+    "price": 59,
+    "ecoScore": "A",
+    "rating": 4.6,
+    "reviews": 689,
+    "badge": null,
+    "img": "1566554738544-d962991c3fee",
+    "desc": "20,000mAh power bank with built-in solar trickle charge. Keep your devices alive anywhere, anytime.",
+    "specs": [
+      {
+        "k": "Capacity",
+        "v": "20,000mAh"
+      },
+      {
+        "k": "Output",
+        "v": "USB-C 30W, USB-A x2"
+      },
+      {
+        "k": "Solar input",
+        "v": "5W"
+      },
+      {
+        "k": "Weight",
+        "v": "1.1 lbs"
+      }
+    ]
+  },
+  {
+    "id": "solis-flex-50",
+    "name": "Solis Flex 50W Mat",
+    "category": "chargers",
+    "price": 79,
+    "ecoScore": "A",
+    "rating": 4.7,
+    "reviews": 234,
+    "badge": null,
+    "img": "1592318348310-f31b61a931c8",
+    "desc": "Ultra-light flexible solar mat for backpacking. Rolls up to fit in any pack. Perfect for multi-day adventures.",
+    "specs": [
+      {
+        "k": "Power",
+        "v": "50W"
+      },
+      {
+        "k": "Weight",
+        "v": "1.4 lbs"
+      },
+      {
+        "k": "Output",
+        "v": "USB-C, USB-A"
+      },
+      {
+        "k": "Material",
+        "v": "ETFE flexible"
+      }
+    ]
+  },
+  {
+    "id": "lumen-led-4",
+    "name": "Lumen Smart LED Bulb Pack (4)",
+    "category": "home",
+    "price": 39,
+    "ecoScore": "A+",
+    "rating": 4.9,
+    "reviews": 512,
+    "badge": null,
+    "img": "1516715573475-908ea40e5c9a",
+    "desc": "Tunable white smart LED bulbs. 9W per bulb, equivalent to 60W incandescent. App and voice control.",
+    "specs": [
+      {
+        "k": "Pack",
+        "v": "4 bulbs"
+      },
+      {
+        "k": "Power",
+        "v": "9W each"
+      },
+      {
+        "k": "Lumens",
+        "v": "800 lm"
+      },
+      {
+        "k": "Lifespan",
+        "v": "25,000 hrs"
+      },
+      {
+        "k": "Smart",
+        "v": "Wi-Fi + Alexa"
+      }
+    ]
+  },
+  {
+    "id": "econest-thermostat",
+    "name": "EcoNest Smart Thermostat",
+    "category": "home",
+    "price": 179,
+    "ecoScore": "A",
+    "rating": 4.8,
+    "reviews": 298,
+    "badge": "Smart",
+    "img": "1545259741-2ea3ebf61fa3",
+    "desc": "Learning thermostat that adapts to your schedule. Saves up to 23% on heating and cooling bills.",
+    "specs": [
+      {
+        "k": "Saves",
+        "v": "Up to 23%"
+      },
+      {
+        "k": "Display",
+        "v": "3.5\" LCD"
+      },
+      {
+        "k": "Sensors",
+        "v": "Multi-room"
+      },
+      {
+        "k": "Compatible",
+        "v": "Google/Alexa"
+      }
+    ]
+  },
+  {
+    "id": "aquasave-flow",
+    "name": "AquaSave Flow Regulator",
+    "category": "home",
+    "price": 24,
+    "ecoScore": "A+",
+    "rating": 4.7,
+    "reviews": 178,
+    "badge": null,
+    "img": "1521207418485-99c705420785",
+    "desc": "Install in minutes. Reduces water flow by 40% without sacrificing pressure. Pack of 3.",
+    "specs": [
+      {
+        "k": "Pack",
+        "v": "3 regulators"
+      },
+      {
+        "k": "Savings",
+        "v": "40% water"
+      },
+      {
+        "k": "Fits",
+        "v": "Standard taps"
+      },
+      {
+        "k": "Material",
+        "v": "Brass + silicone"
+      }
+    ]
+  },
+  {
+    "id": "terraloop-set",
+    "name": "Terraloop Container Set",
+    "category": "lifestyle",
+    "price": 49,
+    "ecoScore": "A+",
+    "rating": 4.9,
+    "reviews": 367,
+    "badge": null,
+    "img": "1740402065396-aa6f2bcd4b7d",
+    "desc": "Reusable glass container set with silicone lids. Microwave and dishwasher safe. Replaces 500+ disposables per year.",
+    "specs": [
+      {
+        "k": "Set",
+        "v": "5 containers"
+      },
+      {
+        "k": "Material",
+        "v": "Borosilicate glass"
+      },
+      {
+        "k": "Lids",
+        "v": "Silicone"
+      },
+      {
+        "k": "Safe",
+        "v": "Microwave/dishwasher"
+      }
+    ]
+  },
+  {
+    "id": "pureleaf-bundle",
+    "name": "PureLeaf Eco Cleaning Bundle",
+    "category": "lifestyle",
+    "price": 34,
+    "ecoScore": "A",
+    "rating": 4.6,
+    "reviews": 245,
+    "badge": null,
+    "img": "1740402065396-aa6f2bcd4b7d",
+    "desc": "Plant-based cleaning concentrates. Refillable glass bottles. Zero plastic, zero waste.",
+    "specs": [
+      {
+        "k": "Includes",
+        "v": "3 concentrates + 2 bottles"
+      },
+      {
+        "k": "Refills",
+        "v": "Up to 12 bottles"
+      },
+      {
+        "k": "Scent",
+        "v": "Citrus + cedar"
+      },
+      {
+        "k": "Biodegradable",
+        "v": "Yes"
+      }
+    ]
+  },
+  {
+    "id": "voltcycle-ebike",
+    "name": "VoltCycle E-Bike",
+    "category": "lifestyle",
+    "price": 1299,
+    "ecoScore": "B",
+    "rating": 4.9,
+    "reviews": 89,
+    "badge": "Premium",
+    "img": "1666359692855-676ac6c8df4c",
+    "desc": "Commuter e-bike with 80mi range, 28mph top speed, and regenerative braking. Carbon frame, solar-ready charging.",
+    "specs": [
+      {
+        "k": "Range",
+        "v": "80 miles"
+      },
+      {
+        "k": "Top speed",
+        "v": "28 mph"
+      },
+      {
+        "k": "Motor",
+        "v": "350W hub"
+      },
+      {
+        "k": "Charge time",
+        "v": "4 hrs"
+      },
+      {
+        "k": "Weight",
+        "v": "38 lbs"
+      }
+    ]
+  }
+]

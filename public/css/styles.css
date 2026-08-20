@@ -1,0 +1,153 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #fdf8f0; color: #1a3a2e; -webkit-font-smoothing: antialiased; }
+.font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(230,167,60,0.18), transparent 60%),
+    radial-gradient(ellipse 60% 80% at 10% 80%, rgba(58,109,77,0.35), transparent 60%),
+    linear-gradient(135deg, #0f2a1f 0%, #1a3a2e 50%, #1f4530 100%);
+}
+.dot-grid { background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px); background-size: 28px 28px; }
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.06;
+}
+
+.product-card { transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease; }
+.product-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px -16px rgba(15,42,31,0.25); }
+.product-card:hover .product-img { transform: scale(1.06); }
+.product-img { transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.product-card:hover .eco-badge { transform: translateY(0); opacity: 1; }
+.eco-badge { transform: translateY(-8px); opacity: 0; transition: all 0.4s ease; }
+
+.btn-primary {
+  background: linear-gradient(135deg, #e6a73c 0%, #c19660 100%);
+  color: #1a3a2e; transition: all 0.3s ease; box-shadow: 0 4px 14px -4px rgba(230,167,60,0.5);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px -6px rgba(230,167,60,0.6); }
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-ghost { border: 1.5px solid rgba(26,58,46,0.25); transition: all 0.3s ease; }
+.btn-ghost:hover { border-color: #1a3a2e; background: rgba(26,58,46,0.04); }
+
+.input-field { transition: all 0.25s ease; background: #fff; border: 1.5px solid rgba(26,58,46,0.15); }
+.input-field:focus { outline: none; border-color: #3a6d4d; box-shadow: 0 0 0 4px rgba(58,109,77,0.12); }
+.input-field.error { border-color: #c0392b; box-shadow: 0 0 0 4px rgba(192,57,43,0.1); }
+
+.drawer { transition: transform 0.4s cubic-bezier(0.22,1,0.36,1); }
+.drawer.closed { transform: translateX(100%); }
+.backdrop { transition: opacity 0.3s ease; }
+.backdrop.closed { opacity: 0; pointer-events: none; }
+.modal { transition: opacity 0.3s ease, transform 0.3s ease; }
+.modal.closed { opacity: 0; pointer-events: none; transform: scale(0.96) translateY(8px); }
+
+.toast { animation: toastIn 0.3s ease forwards; }
+@keyframes toastIn { from {opacity:0; transform: translateX(20px);} to {opacity:1; transform: translateX(0);} }
+.toast.out { animation: toastOut 0.3s ease forwards; }
+@keyframes toastOut { to {opacity:0; transform: translateX(20px);} }
+
+#scroll-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #e6a73c, #d4a574); width: 0%; z-index: 100; transition: width 0.1s ease; }
+
+/* Navbar scroll state — driven by a single class toggle (see setupNavbar in app.js)
+   instead of per-frame inline style writes, so scrolling doesn't force style
+   recalculation on every element every frame. */
+#navbar { background: transparent; border-bottom: 1px solid transparent; box-shadow: none; transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+#navbar.navbar-scrolled { background: rgba(253,248,240,0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom-color: rgba(26,58,46,0.08); box-shadow: 0 2px 24px -8px rgba(15,42,31,0.08); }
+.nav-text, .nav-link { transition: color 0.3s ease; color: #f5e8cf; }
+.navbar-scrolled .nav-text, .navbar-scrolled .nav-link { color: #1a3a2e; }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.counter { font-variant-numeric: tabular-nums; }
+.result-num { transition: color 0.3s ease; }
+
+.chip { transition: all 0.25s ease; }
+.chip.active { background: #1a3a2e; color: #faecd1; border-color: #1a3a2e; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #f5e8cf; }
+::-webkit-scrollbar-thumb { background: #86b094; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #588a6b; }
+
+.eco-A  { background: linear-gradient(135deg,#3a6d4d,#588a6b); }
+.eco-B  { background: linear-gradient(135deg,#c19660,#e6a73c); }
+.eco-C  { background: linear-gradient(135deg,#a07a48,#83623c); }
+
+input[type="range"] { -webkit-appearance: none; appearance: none; height: 6px; background: #dae8df; border-radius: 3px; outline: none; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; background: linear-gradient(135deg,#e6a73c,#c19660); border: 3px solid #fdf8f0; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; background: linear-gradient(135deg,#e6a73c,#c19660); border: 3px solid #fdf8f0; border-radius: 50%; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+
+.spinner { width: 28px; height: 28px; border: 3px solid #dae8df; border-top-color: #3a6d4d; border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@keyframes fadeUp { 0% {opacity:0;transform:translateY(24px);} 100% {opacity:1;transform:translateY(0);} }
+@keyframes fadeIn { 0% {opacity:0;} 100% {opacity:1;} }
+@keyframes float { 0%,100% {transform:translateY(0);} 50% {transform:translateY(-12px);} }
+@keyframes glow { 0%,100% {opacity:0.4;} 50% {opacity:0.7;} }
+.animate-fade-up { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both; }
+.animate-fade-in { animation: fadeIn 0.5s ease both; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-glow { animation: glow 4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ============ Dark mode ============
+   The compiled Tailwind utilities below (bg-cream-*, bg-white, text-forest-*, etc.)
+   ship fixed light-theme colors, so rather than duplicating every utility with a
+   dark: variant across the markup, dark mode is layered on here as a set of
+   `html.dark` overrides scoped to the same class names. Toggled via #theme-toggle
+   in app.js, persisted to localStorage, and applied pre-paint in index.html to
+   avoid a flash of the wrong theme. Sections that are already dark by design
+   (the hero, the calculator, the footer) are intentionally left alone. */
+body { transition: background-color 0.35s ease, color 0.35s ease; }
+html.dark body { background: #0c1f17; color: #ecd9b3; }
+
+html.dark .bg-white { background-color: #142a20 !important; }
+html.dark .bg-cream-50 { background-color: #0f2419 !important; }
+html.dark .bg-cream-100 { background-color: #16301f !important; }
+html.dark .bg-forest-100 { background-color: #1c3928 !important; }
+html.dark .border-forest-100 { border-color: rgba(236,217,179,0.1) !important; }
+html.dark .border-forest-200 { border-color: rgba(236,217,179,0.14) !important; }
+html.dark .border-forest-100\/50 { border-color: rgba(236,217,179,0.08) !important; }
+
+html.dark .text-forest-800,
+html.dark .text-forest-800\/80,
+html.dark .text-forest-900 { color: #f5e8cf !important; }
+html.dark .text-forest-700,
+html.dark .text-forest-700\/70 { color: #d8c9a8 !important; }
+html.dark .text-forest-600,
+html.dark .text-forest-600\/80,
+html.dark .text-forest-600\/70,
+html.dark .text-forest-600\/60,
+html.dark .text-forest-600\/50 { color: #a9b8ab !important; }
+html.dark .text-forest-400 { color: #6f8a76 !important; }
+
+html.dark #navbar.navbar-scrolled { background: rgba(15,36,25,0.92); border-bottom-color: rgba(236,217,179,0.08); }
+html.dark .navbar-scrolled .nav-text,
+html.dark .navbar-scrolled .nav-link { color: #f5e8cf !important; }
+
+html.dark .input-field { background: #16301f; border-color: rgba(236,217,179,0.15); color: #f5e8cf; }
+html.dark .input-field::placeholder { color: rgba(236,217,179,0.4); }
+html.dark .btn-ghost { border-color: rgba(236,217,179,0.25); color: #f5e8cf; }
+html.dark .btn-ghost:hover { border-color: #f5e8cf; background: rgba(236,217,179,0.06); }
+html.dark .chip { background: #16301f !important; border-color: rgba(236,217,179,0.14) !important; color: #f5e8cf !important; }
+html.dark .chip.active { background: #e6a73c !important; color: #0f2a1f !important; border-color: #e6a73c !important; }
+
+html.dark .cart-drawer,
+html.dark #cart-drawer,
+html.dark #checkout-modal .bg-cream-50,
+html.dark #product-modal .bg-cream-50 { background: #0f2419; }
+html.dark #cart-footer.bg-cream-100 { background: #16301f; }
+
+html.dark .product-card:hover { box-shadow: 0 24px 48px -16px rgba(0,0,0,0.5); }
+html.dark ::-webkit-scrollbar-track { background: #16301f; }
+html.dark ::-webkit-scrollbar-thumb { background: #3a6d4d; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #588a6b; }
+html.dark input[type="range"] { background: #1c3928; }
+html.dark .spinner { border-color: #1c3928; border-top-color: #e6a73c; }
+
+#theme-icon-sun, #theme-icon-moon { transition: opacity 0.2s ease; }
